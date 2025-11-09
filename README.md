@@ -1,7 +1,4 @@
 # TMJ Coach  
-**Tagline:** *Your personal jaw-wellness AI companion*
-
----
 
 ## 🎯 Overview  
 
@@ -17,7 +14,6 @@ According to clinical research, **5–12% of the population** experience TMJ-rel
 - Gently nudges you to relax  
 - Learns from your feedback to adapt over time
 
----
 
 ## 💡 Problem & Motivation  
 
@@ -31,7 +27,7 @@ According to clinical research, **5–12% of the population** experience TMJ-rel
 
 **TMJ Coach** addresses this by being proactive and personalized as it learns your relaxed state and provides live feedback before symptoms worsen.
 
----
+
 
 ## 🚀 What TMJ Coach Does  
 
@@ -46,7 +42,7 @@ According to clinical research, **5–12% of the population** experience TMJ-rel
 5. **Learning** – Asks, “Were you clenching?” — your yes/no feedback improves its model.  
 6. **Adaptivity** – Reinforcement learning (RL) adjusts how often and how quickly it reminds you based on your responses.  
 
----
+
 
 ## 🧱 Architecture  
 
@@ -73,7 +69,7 @@ UI + Voice Feedback
 (PyQt6 app + pyttsx3 TTS)
 ```
 
----
+
 
 ## 🧠 How the Agent Works  
 
@@ -95,7 +91,7 @@ These features describe **vertical closure** and **horizontal motion** of the ja
 features = [lip_gap_ratio, mouth_width_ratio, jaw_offset, lateral_score]
 ```
 
----
+
 
 ### ⚙️ Detection Logic  
 
@@ -117,7 +113,7 @@ Once you start providing YES/NO feedback, the live classifier replaces these heu
 is_clenched, p_clench = model_predict_is_clenched(features, fallback_is_clenched=heuristic_clench)
 ```
 
----
+
 
 ### 🔁 Feedback & Continual Learning  
 
@@ -147,7 +143,7 @@ The labeled data updates the classifier immediately through continual learning:
 clf.partial_fit(X, y)
 ```
 
----
+
 
 ### 🧭 Reinforcement Learning Agent  
 
